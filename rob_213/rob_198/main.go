@@ -13,20 +13,6 @@ func rob(nums []int) int {
 	if n == 2 {
 		return max(nums[0], nums[1])
 	}
-	return max(_rob(nums[1:]), _rob(nums[:n-1]))
-}
-
-func _rob(nums []int) int {
-	n := len(nums)
-	if n == 0 {
-		return 0
-	}
-	if n == 1 {
-		return nums[0]
-	}
-	if n == 2 {
-		return max(nums[0], nums[1])
-	}
 	dp := make([]int, n)
 	dp[0] = nums[0]
 	dp[1] = max(nums[0], nums[1])
@@ -44,7 +30,7 @@ func max(x, y int) int {
 }
 
 func main() {
-	nums := []int{1,2,3,1}
+	nums := []int{2, 1, 1, 2}
 	res := rob(nums)
 	fmt.Println(res)
 }
