@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+//时间复杂度：O(n)
+//空间复杂度：O(1)
 func maxProfit(prices []int) int {
 	n := len(prices)
 	if n <= 1 {
